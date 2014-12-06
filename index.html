@@ -182,12 +182,16 @@ Tsubushi
               Reveal.up();
               break;
           }
+          document.getElementById("hands").className = "grayscale";
         },
         onEnd: function(direction) {
+          document.getElementById("hands").className = "";
         }
       });
     </script>
-    <div id="hand_1" class="hand hand-left" ></div>
-    <div id="hand_2" class="hand hand-right" ></div>
+    <div id="hands">
+      <div id="hand_1" class="hand hand-left" ></div>
+      <div id="hand_2" class="hand hand-right" ></div>
+    </div>
   </body>
 </html>

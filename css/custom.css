@@ -23,3 +23,9 @@
 	background-size: 32px 32px;
 	margin: 10px;
 }
+
+.grayscale {
+	filter: grayscale(1);
+	-webkit-filter: grayscale(1);
+	-moz-filter: grayscale(1);
+}
