@@ -154,10 +154,16 @@ Tubushi
         onStart: function(direction) {
           switch(direction) {
             case "forward":
-              Reveal.next();
+              Reveal.right();
               break;
             case "backward":
-              Reveal.prev();
+              Reveal.left();
+              break;
+            case "kubire":
+              Reveal.down();
+              break;
+            case "tsubushi":
+              Reveal.up();
               break;
           }
         },
