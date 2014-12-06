@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="css/reveal.min.css">
     <link rel="stylesheet" href="css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="css/custom.css">
 
     <!-- For syntax highlighting -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -151,6 +152,20 @@ Tsubushi
       });
 
       Rokuro.initialize({
+        onHandDetect: function(count) {
+          switch(count) {
+            case 0:
+              document.getElementById("hand_1").style.display = "none";
+              document.getElementById("hand_2").style.display = "none";
+              break;
+            case 1:
+              document.getElementById("hand_1").style.display = "block";
+              break;
+            case 2:
+              document.getElementById("hand_2").style.display = "block";
+              break;
+          };
+        },
         onStart: function(direction) {
           switch(direction) {
             case "forward":
@@ -171,5 +186,7 @@ Tsubushi
         }
       });
     </script>
+    <div id="hand_1" class="hand hand-left" ></div>
+    <div id="hand_2" class="hand hand-right" ></div>
   </body>
 </html>
