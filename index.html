@@ -93,19 +93,18 @@ PlayNext
         ]
       });
 
-      Rokuro.init({
-        onStart: function() {
-
-        },
-        onEnd: function(direction) {
+      Rokuro.initialize({
+        onStart: function(direction) {
           switch(direction) {
             case "forward":
               Reveal.next();
               break;
             case "backward":
-              Reval.prev();
+              Reveal.prev();
               break;
           }
+        },
+        onEnd: function(direction) {
         }
       });
     </script>
